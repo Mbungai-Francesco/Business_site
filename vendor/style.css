@@ -1,3 +1,453 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  height: fit-content;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  background-color: #155bd5;
+  width: 100%;
+  justify-content: space-between;
+  padding-block: 1em;
+  padding-inline: 1em 2em;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+header .logoNav {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+header .logoNav nav {
+  margin-inline: 4em;
+  color: #efefef;
+}
+header .logoNav nav a {
+  margin-inline: 1em;
+  opacity: 70%;
+}
+header .logoNav nav a:nth-child(1) {
+  opacity: 100%;
+  color: #f0f0f0;
+}
+header .headerBtn {
+  width: 2em;
+  height: 2em;
+  background-color: transperent;
+  border: #efefef 0.5px solid;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .headerBtn div {
+  border-bottom: 2px #f0f0f0 solid;
+  width: 50%;
+  margin-block: 2px;
+}
+
+#home {
+  display: flex;
+  justify-content: space-between;
+  padding: 4em 2em;
+  background-color: #155bd5;
+  height: 88vh;
+}
+#home .gauche {
+  width: 55%;
+  align-self: center;
+}
+#home .gauche h1 {
+  font-size: 2.8em;
+  color: #f0f0f0;
+  font-family: "Poppins Medium";
+  margin-block: 0 0.5em;
+}
+#home .gauche p {
+  color: #f0f0f0;
+  opacity: 70%;
+  margin-block: 0 2em;
+}
+#home .gauche .btns {
+  display: flex;
+  height: 2.5em;
+}
+#home .gauche .btns input {
+  border: 0;
+  border-radius: 3px;
+  padding-inline: 1.5em;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #155bd5;
+  background-color: #f0f0f0;
+}
+#home .gauche .btns .watch {
+  display: flex;
+  align-items: center;
+  color: #f0f0f0;
+}
+#home .gauche .btns .watch svg {
+  background-color: #f0f0f0;
+  width: 2.5em;
+  height: 100%;
+  padding-inline: 10px;
+  border-radius: 50%;
+  margin-inline: 1em 0;
+}
+#home .gauche .btns .watch a {
+  margin-inline: 1em 0;
+  font-weight: 500;
+}
+#home .droite {
+  width: 65%;
+  text-align: right;
+}
+#home .droite img {
+  border-radius: 10px;
+  width: 90%;
+}
+
+#story {
+  display: flex;
+  background-color: white;
+  padding: 5em 5em;
+}
+#story .gauche {
+  width: 40%;
+}
+#story .gauche img {
+  width: 100%;
+}
+#story .droite {
+  margin-left: 4em;
+  align-self: center;
+  width: 50%;
+}
+#story .droite .ourStory {
+  display: flex;
+  align-items: center;
+}
+#story .droite .ourStory .line {
+  border-bottom: 2px #155bd5 solid;
+  width: 1.5em;
+  margin-inline: 0 0.7em;
+}
+#story .droite .ourStory h4 {
+  font-weight: 500;
+  color: black;
+  opacity: 80%;
+}
+#story .droite h1 {
+  font-size: 2.5em;
+  line-height: 1em;
+  margin-block: 0.5em 1em;
+  font-weight: 600;
+}
+#story .droite .storyBtns {
+  background-color: #efefef;
+  padding: 1em 0;
+  border-radius: 3px;
+}
+#story .droite .storyBtns input {
+  border: 0;
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: black;
+  opacity: 80%;
+  background-color: #FFFFFF;
+  padding: 0.7em 1em;
+  margin-inline: 0.5em;
+}
+#story .droite .storyBtns input:nth-child(1) {
+  margin-left: 1em;
+}
+#story .droite .storyBtns input:hover {
+  color: #efefef;
+  background-color: #155bd5;
+  font-weight: 600;
+}
+#story .droite p {
+  opacity: 70%;
+  margin-block: 2em;
+}
+
+#services {
+  background-color: white;
+  text-align: center;
+  padding-block: 0 5em;
+}
+#services .top {
+  margin-bottom: 2em;
+}
+#services .top input {
+  background-color: transparent;
+  border: 2px #155bd5 solid;
+  color: #155bd5;
+  font-weight: 600;
+  padding: 0.4em 2em;
+  border-radius: 20px;
+  margin-block: 2em 0.8em;
+}
+#services .top h1 {
+  font-weight: 600;
+  font-size: 2em;
+  margin-bottom: 0.4em;
+}
+#services .top p {
+  opacity: 80%;
+}
+#services .bottom {
+  width: 100%;
+  display: flex;
+  padding: 0 2em;
+  justify-content: space-between;
+}
+#services .bottom .service {
+  text-align: left;
+  border: 1px #efefef solid;
+  width: 32.5%;
+  padding-block: 2em 0.8em;
+  padding-inline: 1.5em;
+  border-radius: 10px;
+}
+#services .bottom .service .log {
+  width: 4.5em;
+  height: 4.5em;
+  background-color: transperent;
+  border: #155bd5 2px solid;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+}
+#services .bottom .service .log + p {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-bottom: 0.8em;
+}
+
+#intro {
+  text-align: center;
+  padding-block: 0 5em;
+}
+#intro input {
+  background-color: transparent;
+  border: 2px #155bd5 solid;
+  color: #155bd5;
+  font-weight: 600;
+  padding: 0.4em 2em;
+  border-radius: 20px;
+  margin-block: 2em 0.8em;
+}
+#intro h1 {
+  margin-block: 0.5em 0;
+  font-size: 2em;
+  font-weight: 600;
+}
+#intro p {
+  opacity: 80%;
+  margin-block: 1em 3em;
+}
+
+#portfolio {
+  text-align: center;
+}
+#portfolio input {
+  background-color: transparent;
+  border: 2px #155bd5 solid;
+  color: #155bd5;
+  font-weight: 600;
+  padding: 0.4em 2em;
+  border-radius: 20px;
+  margin-block: 2em 0.8em;
+}
+#portfolio h1 {
+  margin-block: 0.5em 0;
+  font-size: 2em;
+  font-weight: 600;
+}
+#portfolio p {
+  opacity: 80%;
+  margin-block: 1em 3em;
+}
+#portfolio .works {
+  margin: auto;
+  display: flex;
+  width: 98%;
+  justify-content: space-between;
+  padding-inline: 2em;
+  padding-bottom: 1em;
+  border-bottom: 2px black solid;
+}
+#portfolio .works .work {
+  width: 32.5%;
+  text-align: left;
+}
+#portfolio .works .work img {
+  width: 100%;
+  border-radius: 8px;
+}
+#portfolio .works .work p {
+  margin: 0;
+}
+#portfolio .works .work img + p {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-block: 0.2em;
+}
+
+#contact {
+  display: flex;
+  padding-block: 5em;
+  padding-inline: 1em;
+  justify-content: space-between;
+}
+#contact .guache {
+  width: 30%;
+  margin-inline: 0 2em;
+}
+#contact .guache .block {
+  margin-block: 0 2em;
+  border: 2px #efefef solid;
+  border-radius: 8px;
+  display: flex;
+  padding-block: 1em;
+}
+#contact .guache .block .log {
+  width: 2.7em;
+  height: 2.7em;
+  background-color: #155bd5;
+  border: #155bd5 0.5px solid;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 1em;
+}
+#contact .guache .block .log svg {
+  width: 1.4em;
+  height: 1.4em;
+}
+#contact .guache .block .log svg path {
+  stroke: #f0f0f0;
+}
+#contact .guache .block .inf p {
+  opacity: 50%;
+}
+#contact .droite {
+  border: 2px #efefef solid;
+  border-radius: 10px;
+  text-align: center;
+  width: 65%;
+  padding: 3em;
+}
+#contact .droite h3 {
+  font-weight: 600;
+  color: #155bd5;
+}
+#contact .droite h1 {
+  font-weight: 600;
+  font-size: 2em;
+  margin-block: 0 0.5em;
+}
+#contact .droite p {
+  opacity: 70%;
+  margin-block: 0 1.2em;
+}
+#contact .droite .inputs {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+  padding-block: 0.5em;
+  margin-block: 0 1em;
+}
+#contact .droite .inputs input {
+  font-size: 0.9em;
+  width: 48%;
+  padding: 1em 1.5em;
+  border: 1px #efefef solid;
+  border-radius: 40px;
+}
+#contact .droite .inputs input:nth-child(2) {
+  margin-left: 0.5em;
+}
+#contact .droite textarea {
+  width: 100%;
+  padding: 1em 1.5em;
+  border: 1px #efefef solid;
+  border-radius: 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding-block: 0 1em;
+}
+footer .foot {
+  width: fit-content;
+}
+footer .foot img, footer .foot h3 {
+  margin-block: 0 1em;
+}
+footer .foot h3 {
+  opacity: 85%;
+}
+footer .foot p {
+  font-size: 0.9em;
+  opacity: 60%;
+  margin-block: 0 1em;
+  font-weight: 500;
+}
+footer .foot p span {
+  color: #155bd5;
+}
+footer .foot img + p {
+  margin-block: 0 2em;
+}
+footer .foot .email {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+footer .foot .email input {
+  width: 100%;
+  padding: 1em 1em;
+  border: 2px #efefef solid;
+  border-radius: 8px;
+  font-size: 0.9em;
+}
+footer .foot .email input::placeholder {
+  font-weight: 400;
+}
+footer .foot .email svg {
+  position: absolute;
+  height: 70%;
+  background-color: #155bd5;
+  width: 2.3em;
+  right: 0.5em;
+  padding: 7px;
+  border-radius: 5px;
+  align-self: center;
+}
 
 /*# sourceMappingURL=style.css.map */

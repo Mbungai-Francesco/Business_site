@@ -1,0 +1,348 @@
+$blue : #155bd5
+$white1 : #f0f0f0
+$white2 : #efefef
+@mixin circle($w,$bor,$back,$r)
+  width: $w
+  height: $w
+  background-color: $back
+  border: $bor $r solid
+  border-radius: 50%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+@mixin line($w, $c)
+  border-bottom: 2px $c solid
+  width: $w  
+@mixin button()
+  background-color: transparent
+  border: 2px $blue solid
+  color: $blue
+  font-weight: 600
+  padding: 0.4em 2em
+  border-radius: 20px
+  margin-block: 2em .8em
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: 'Poppins'
+a
+  color: inherit
+  text-decoration: none
+body
+  height: fit-content
+  width: 100%
+header
+  display: flex
+  background-color: $blue
+  width: 100%
+  justify-content: space-between
+  padding-block: 1em
+  padding-inline: 1em 2em
+  align-items:  center
+  position: sticky
+  top: 0
+  z-index: 2
+  .logoNav
+    display: flex
+    align-items: center
+    width: fit-content
+    nav
+      margin-inline: 4em
+      color: $white2
+      a
+        margin-inline: 1em
+        opacity: 70%
+      a:nth-child(1)
+        opacity: 100%
+        color: $white1
+  .headerBtn
+    @include circle(2em,$white2,transperent,.5px)
+    div
+      @include line(50%,$white1)
+      margin-block: 2px
+#home
+  display: flex
+  justify-content: space-between
+  padding: 4em 2em
+  background-color: $blue
+  height: 88vh
+  .gauche
+    width: 55%
+    align-self: center
+    // background-color: pink
+    h1
+      font-size: 2.8em
+      color: $white1
+      font-family: 'Poppins Medium'
+      margin-block: 0 .5em
+    p
+      color: $white1
+      opacity: 70%
+      margin-block: 0 2em
+    .btns
+      display: flex
+      height:  2.5em
+      input
+        border: 0
+        border-radius: 3px
+        padding-inline: 1.5em
+        font-size: 1.1em
+        font-weight: 600
+        color: $blue
+        background-color: $white1
+      .watch
+        display: flex
+        align-items: center
+        color: $white1
+        svg
+          background-color: $white1   
+          width: 2.5em
+          height: 100%
+          padding-inline: 10px
+          border-radius: 50%
+          margin-inline: 1em 0
+        a
+          margin-inline: 1em 0
+          font-weight: 500
+        
+  .droite
+    width: 65%
+    text-align: right
+    img
+      border-radius: 10px
+      width: 90%
+#story
+  display: flex
+  background-color: white
+  padding: 5em 5em
+  .gauche
+    width: 40%
+    img
+      width: 100%
+  .droite
+    margin-left: 4em
+    align-self: center
+    width: 50%
+    .ourStory
+      display: flex
+      align-items: center
+      .line
+        @include line(1.5em,$blue)
+        margin-inline: 0 0.7em
+      h4
+        font-weight: 500
+        color: black
+        opacity: 80%
+    h1
+      font-size: 2.5em
+      line-height: 1em
+      margin-block: 0.5em 1em
+      font-weight: 600
+    .storyBtns
+      background-color: $white2
+      padding: 1em 0
+      border-radius: 3px
+      input
+        border: 0
+        border-radius: 3px
+        font-size: 0.9em
+        font-weight: 600
+        color: black
+        opacity: 80%
+        background-color: #FFFFFF
+        padding: 0.7em 1em
+        margin-inline: .5em
+      input:nth-child(1)
+        margin-left: 1em
+      input:hover
+        color: $white2
+        background-color: $blue
+        font-weight: 600
+    p
+      opacity: 70%
+      margin-block: 2em
+#services
+  background-color: white
+  text-align: center
+  padding-block: 0 5em
+  .top
+    margin-bottom: 2em
+    input
+      background-color: transparent
+      border: 2px $blue solid
+      color: $blue
+      font-weight: 600
+      padding: 0.4em 2em
+      border-radius: 20px
+      margin-block: 2em .8em
+    h1
+      font-weight: 600
+      font-size: 2em
+      margin-bottom: .4em
+    p
+      opacity: 80%
+  .bottom
+    width: 100%
+    display: flex
+    padding: 0 2em
+    justify-content: space-between
+    .service
+      text-align: left
+      border: 1px $white2  solid 
+      width: 32.5%
+      padding-block: 2em 0.8em
+      padding-inline: 1.5em
+      border-radius: 10px
+      .log
+        @include circle(4.5em,$blue,transperent,2px)
+        margin-bottom: 1em
+      .log + p
+        font-size: 1.5em
+        font-weight: 500
+        margin-bottom: 0.8em
+#intro
+  text-align: center
+  padding-block: 0 5em
+  input
+    @include button()
+  h1
+    margin-block: .5em 0
+    font-size: 2em
+    font-weight: 600
+  p
+    opacity: 80%
+    margin-block: 1em 3em
+#portfolio
+  text-align: center
+  input
+    @include button()
+  h1
+    margin-block: .5em 0
+    font-size: 2em
+    font-weight: 600
+  p
+    opacity: 80%
+    margin-block: 1em 3em
+  .works
+    margin: auto
+    display: flex
+    width: 98%
+    justify-content: space-between
+    padding-inline: 2em
+    padding-bottom: 1em
+    border-bottom: 2px black solid
+    .work
+      width: 32.5%
+      text-align: left
+      img
+        width: 100%
+        border-radius: 8px
+      p
+        margin: 0
+      img + p
+        font-size: 1.3em
+        font-weight: 600
+        margin-block: 0.2em
+#contact
+  display: flex
+  padding-block: 5em
+  padding-inline: 1em 
+  justify-content: space-between
+  .guache
+    width: 30%
+    margin-inline: 0 2em
+    .block
+      margin-block: 0 2em
+      border: 2px $white2 solid
+      border-radius:  8px
+      display: flex
+      padding-block: 1em
+      .log
+        @include circle(2.7em,$blue,$blue,.5px)
+        margin-inline: 1em 
+        svg
+          width: 1.4em
+          height: 1.4em
+          path
+            stroke: $white1
+      .inf p
+        opacity: 50%
+  .droite
+    border: 2px $white2 solid
+    border-radius: 10px
+    text-align: center
+    width: 65%
+    padding: 3em
+    h3
+      font-weight: 600
+      color: $blue
+    h1
+      font-weight: 600
+      font-size: 2em
+      margin-block: 0 .5em
+    p
+      opacity: 70%
+      margin-block: 0 1.2em
+    .inputs
+      display: flex
+      justify-content: space-between
+      width: 100%
+      margin: auto
+      padding-block: 0.5em
+      margin-block: 0 1em
+      input
+        font-size: .9em
+        width: 48%
+        padding: 1em 1.5em
+        border: 1px $white2 solid
+        border-radius: 40px
+      input:nth-child(2)
+        margin-left: 0.5em
+
+    textarea
+      width: 100%
+      padding: 1em 1.5em
+      border: 1px $white2 solid
+      border-radius: 10px
+footer
+  display: flex
+  justify-content: space-around
+  padding-block: 0 1em
+  .foot
+    width: fit-content
+    img,h3
+      margin-block: 0 1em
+    h3
+      opacity: 85%
+    p
+      font-size: .9em
+      opacity: 60%
+      margin-block: 0 1em
+      font-weight: 500
+    p span
+      color: $blue
+    img + p
+      margin-block: 0 2em
+    .email
+      position: relative
+      width: 100%
+      display: flex
+      input
+        width: 100%
+        padding: 1em 1em
+        border: 2px $white2 solid
+        border-radius: 8px
+        font-size: .9em
+      input::placeholder
+        font-weight: 400
+      svg
+        position: absolute
+        height: 70%
+        background-color: $blue
+        width: 2.3em
+        right: 0.5em
+        padding: 7px
+        border-radius: 5px
+        align-self: center
