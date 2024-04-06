@@ -1,0 +1,3 @@
+bleu: #155bd5
+grise: #f0f0f0
+grise-2: #efefef
